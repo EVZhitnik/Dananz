@@ -1,0 +1,37 @@
+:root {
+    --color-white: #FFFFFF;
+    --color-gray: #9C9C9C;
+    --color-lightgray: #D9D9D9;
+    --color-black: #000000;
+    --color-black-70: #141414;
+    --color-black-50: #333333;
+    --color-black-30: #3C3C3C;
+    --color-blue: #2C3878;
+    --color-blue-90: #566093;
+    --color-blue-75: #8088AE;
+    --color-blue-50: #ABAFC9;
+    --color-blue-25: #D5D7E4;
+    --color-blue-10: #EAEBF2;
+
+    --border-header: var(--border-width-m) solid var(--color-black);
+    --border-button: var(--border-width-s) solid var(--color-black-30);
+    --border-form: var(--border-width-s) solid var(--color-gray);
+
+    --border-width-m: 2px;
+    --border-width-s: 1px;
+
+    --shadow: 0 0 var(--shadow-width-m) var(--shadow-width-s) rgba(0, 0, 0, 0.1);
+
+    --shadow-width-m: 5px;
+    --shadow-width-s: 1px;
+
+    --font-family-base: 'Poppins';
+
+    --container-width: #{fluid-to-mobile($container-desktop-width, $container-mobile-width)};
+    --container-padding-x: 16px;
+
+    --home-section-padding-y: #{fluid-to-mobile(160, 50)};
+    --section-padding-y: #{fluid-to-mobile(100, 50)};
+
+    --transition-duration: 0.2s;
+}
