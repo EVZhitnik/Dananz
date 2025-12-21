@@ -1,0 +1,7 @@
+.logo {
+  width: fluid(126, 80);
+
+  @include hover {
+    scale: 1.05;
+  }
+}
