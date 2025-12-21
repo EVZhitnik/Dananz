@@ -1,3 +1,86 @@
 .footer {
+  padding-block: fluid-to-mobile(80, 50);
 
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__info {
+    display: grid;
+    row-gap: 10px;
+  }
+
+  &__body {
+    display: grid;
+    justify-items: flex-end;
+    row-gap: 40px;
+    color: var(--color-black-50);
+
+    @include mobile {
+      justify-items: flex-start;
+    }
+  }
+
+  &__feedback-form {
+    &-text {
+      position: relative;
+      padding-left: 24px;
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+
+      &::before {
+        @include abs-position(vertical);
+        @include square(14px);
+
+        content: '';
+        left: 0;
+        background-color: var(--color-black-50);
+        border-radius: 100%;
+      }
+    }
+
+    &-body {
+      display: flex;
+      column-gap: 10px;
+      height: 50px;
+      border-bottom: var(--border-footer);
+    }
+
+    &-control {
+      width: 100%;
+      padding-bottom: 15px;
+      border: none;
+
+      &::placeholder {
+        font-size: 16px;
+        color: var(--color-lightgray);
+      }
+    }
+
+    &-button {
+      color: var(--color-black);
+
+      @include hover {
+        color: var(--color-blue);
+      }
+    }
+  }
+
+  &__actions {
+    display: grid;
+    row-gap: 15px;
+
+    @include mobile-s {
+      width: 100%;
+      justify-items: center;
+    }
+  }
 }

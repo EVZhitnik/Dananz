@@ -1,0 +1,18 @@
+.soc1als {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 25px;
+  }
+  
+  &__item {
+    @include square(32px);
+
+    background-color: var(--color-lightgray);
+    border-radius: 50%;
+  }
+
+  &__link {
+    color: var(--color-black);
+  }
+}
