@@ -1,2 +1,16 @@
-.button  {
+.button {
+  @include flex-center(true);
+
+  height: 49px;
+  padding-inline: 32px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-white);
+  background-color: var(--color-blue);
+  border: var(--border-button);
+
+  @include hover {
+    background-color: var(--color-white);
+  }
 }

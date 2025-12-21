@@ -67,7 +67,6 @@ a {
 
     @include hover {
         color: var(--color-blue);
-        scale: 1.05;
     }
 
     &[class] {
