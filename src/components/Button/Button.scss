@@ -13,4 +13,31 @@
   @include hover {
     background-color: var(--color-white);
   }
+
+  &:disabled {
+    background-color: var(--color-blue-90);
+    pointer-events: none;
+  }
+
+  &:has(.button__icon:only-child) {
+    @include square(32px);
+    
+    padding: 0;
+    background-color: transparent;
+    border: none;
+  }
+  
+  &--footer {
+    @include square(24px);
+
+    .button__icon {
+      --iconSize: 24px;
+    }
+  }
+
+  &--soc1als {
+    .button__icon {
+      --iconSize: 20px;
+    }
+  }
 }
