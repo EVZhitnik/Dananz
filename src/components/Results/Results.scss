@@ -1,0 +1,31 @@
+.results {
+  background-color: var(--color-blue);
+  padding: fluid-to-mobile(40, 20) fluid-to-mobile(48, 20);
+
+  @include mobile-s {
+    max-width: 100%;
+  }
+
+  &__list {
+    display: grid;
+    row-gap: 57px;
+
+    @include mobile-s {
+      row-gap: 20px;
+    }
+  }
+
+  &__item {
+    display: grid;
+    text-align: center;
+    color: var(--color-white);
+  }
+
+  &__value {
+    font-size: fluid(52, 32);
+  }
+
+  &__title {
+    font-size: 16px;
+  }
+}

@@ -1,12 +1,9 @@
-import { Head } from "minista"
+import Hero from "@/sections/Hero"
 
 export default function () {
   return (
     <>
-      <Head>
-        <title>Hello!</title>
-      </Head>
-      <h1>Hello!</h1>
+      <Hero label="home" />
     </>
   )
 }

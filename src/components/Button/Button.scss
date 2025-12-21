@@ -28,8 +28,6 @@
   }
   
   &--footer {
-    @include square(24px);
-
     .button__icon {
       --iconSize: 24px;
     }
