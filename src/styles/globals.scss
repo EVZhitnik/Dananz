@@ -38,6 +38,10 @@ h2, .h2 {
     @include fluid-text(36, 28);
 
     line-height: 1.7;
+
+    @include mobile-s {
+        line-height: 1.5;
+    }
 }
 
 h3, .h3 {

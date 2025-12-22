@@ -22,7 +22,10 @@
     --border-width-s: 1px;
 
     --shadow: 0 0 var(--shadow-width-m) var(--shadow-width-s) rgba(0, 0, 0, 0.1);
+    --shadow-author: var(--shadow-width-l) var(--shadow-width-l) var(--shadow-width-xl) rgba(0, 0, 0, 0.05);
 
+    --shadow-width-xl: 40px;
+    --shadow-width-l: 10px;
     --shadow-width-m: 5px;
     --shadow-width-s: 1px;
 

@@ -10,6 +10,10 @@
   background-color: var(--color-blue);
   border: var(--border-button);
 
+  @include mobile {
+    justify-self: center;
+  }
+
   @include hover {
     background-color: var(--color-white);
   }

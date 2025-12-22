@@ -1,45 +1,55 @@
 import './Section.scss';
 import clsx from 'clsx';
 
-const Section = (props) => {
+export default (props) => {
   const {
     className,
-    tag = 'h2',
+    mode = '',
+    isTwoColumnsInfo = false,
+    subtitle,
+    subtitleWidth,
     title,
     titleId,
     description,
-    actions,
-    isActionsHiddenOnMobile = false,
     children,
   } = props;
+
+  const headerContent = (
+    <>
+      <span 
+        className="section__subtitle"
+        style={subtitleWidth ? { '--subtitle-width': subtitleWidth } : undefined}
+      >
+        {subtitle}
+      </span>
+      <h2 className="section__title h2" id={titleId}>{title}</h2>
+    </>
+  );
 
   return (
     <section 
       className={clsx(className, 'section container')}
       aria-label={titleId}  
     >
-      <header className="section__header">
+      <header className={clsx("section__header", {
+        [`section__header--${mode}`]: mode,
+      })}>
         <div className="section__info">
-          <h2 className="section__title h2" id={titleId}>{title}</h2>
+          {isTwoColumnsInfo ? (
+            <div className="section__wrapper">
+              {headerContent}
+            </div>
+          ) : headerContent}
           {description && (
             <div className="section__description">
               <p>{description}</p>
             </div>
           )}
         </div>
-        {actions && (
-          <div 
-            className={clsx('section__actions', {'hidden-mobile': isActionsHiddenOnMobile})}
-          >
-            {actions}
-          </div>
-        )}
       </header>
       <div className="section__body">
         {children}
       </div>
     </section>
-  )
-}
-
-export default Section;
+  );
+};
