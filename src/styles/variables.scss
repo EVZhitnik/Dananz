@@ -34,7 +34,7 @@
     --container-width: #{fluid-to-mobile($container-desktop-width, $container-mobile-width)};
     --container-padding-x: 16px;
 
-    --home-section-padding-y: #{fluid-to-mobile(160, 50)};
+    --home-section-padding-y: #{fluid-to-mobile(80, 50)};
     --section-padding-y: #{fluid-to-mobile(100, 50)};
 
     --transition-duration: 0.2s;

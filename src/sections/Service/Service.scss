@@ -1,0 +1,55 @@
+.service {
+  &__content {
+    position: relative;
+    z-index: 10;
+    width: calc(883 / 1200 * 100%);
+    padding-block: 40px;
+    padding-right: 40px;
+    background-color: var(--color-white);
+
+    @include mobile {
+      width: 100%;
+      padding-right: 0;
+    }
+  }
+
+  &__list {
+    display: grid;
+    row-gap: 35px;
+    list-style: none;
+    counter-reset: item;
+    padding-left: 0;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+    counter-increment: item;
+    padding-left: 55px;
+
+    &::before {
+      @include fluid-text(24, 20);
+
+      content: counter(item, decimal-leading-zero);
+      position: absolute;
+      left: 0;
+      font-weight: 600;
+      line-height: 1.4;
+      color: var(--color-black-50);
+    }
+  }
+
+  &__image {
+    position: relative;
+    top: -163px;
+    z-index: 5;
+    margin-left: auto;
+
+    @include mobile {
+      top: 0;
+    }
+  }
+}
