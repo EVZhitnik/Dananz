@@ -1,9 +1,11 @@
+import Button from '@/components/Button';
 import './Section.scss';
 import clsx from 'clsx';
 
 export default (props) => {
   const {
     className,
+    isTwoColumnsSection = false,
     mode = '',
     isTwoColumnsInfo = false,
     subtitle,
@@ -11,6 +13,7 @@ export default (props) => {
     title,
     titleId,
     description,
+    actions = false,
     children,
   } = props;
 
@@ -36,7 +39,11 @@ export default (props) => {
 
   return (
     <section 
-      className={clsx(className, 'section container')}
+      className={clsx(className, 'section', {
+        [`section--${mode}`]: isTwoColumnsSection,
+      },
+      'container'
+    )}
       aria-label={titleId}  
     >
       <header className={clsx("section__header", {
@@ -54,6 +61,14 @@ export default (props) => {
               {headerContent}
             </div>
           ) : headerContent}
+          {actions && (
+            <Button 
+              className="section__button"
+              mode="section"
+              href="./"
+              label="See Materials"
+            />
+          )}
         </div>
       </header>
       <div className="section__body">

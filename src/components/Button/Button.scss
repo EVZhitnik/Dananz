@@ -52,4 +52,14 @@
       --iconSize: 20px;
     }
   }
+
+  &--section {
+    color: var(--color-black-50);
+    background-color: var(--color-white);
+
+    @include hover {
+      color: var(--color-white);
+      background-color: var(--color-blue);
+    }
+  }
 }
