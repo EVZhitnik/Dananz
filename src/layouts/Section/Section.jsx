@@ -16,12 +16,6 @@ export default (props) => {
 
   const headerContent = (
     <>
-      <span 
-        className="section__subtitle"
-        style={subtitleWidth ? { '--subtitle-width': subtitleWidth } : undefined}
-      >
-        {subtitle}
-      </span>
       <h2 
         className={clsx("section__title h2", {
         [`section__title--${mode}`]: mode,
@@ -30,6 +24,13 @@ export default (props) => {
       >
         {title}
       </h2>
+      {description && (
+        <div className={clsx("section__description", {
+          [`section__description--${mode}`]: mode,
+        })}>
+          <p>{description}</p>
+        </div>
+      )}
     </>
   );
 
@@ -42,18 +43,17 @@ export default (props) => {
         [`section__header--${mode}`]: mode,
       })}>
         <div className="section__info">
+          <span 
+            className="section__subtitle"
+            style={subtitleWidth ? { '--subtitle-width': subtitleWidth } : undefined}
+          >
+            {subtitle}
+          </span>
           {isTwoColumnsInfo ? (
             <div className="section__wrapper">
               {headerContent}
             </div>
           ) : headerContent}
-          {description && (
-            <div className={clsx("section__description", {
-              [`section__description--${mode}`]: mode,
-            })}>
-              <p>{description}</p>
-            </div>
-          )}
         </div>
       </header>
       <div className="section__body">
