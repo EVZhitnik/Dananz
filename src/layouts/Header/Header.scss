@@ -8,11 +8,12 @@
   animation-name: scrolling-header;
   animation-fill-mode: both;
   animation-timeline: scroll();
-  animation-range: 200px 300px;
+  animation-range: 100px 300px;
   
   @keyframes scrolling-header {
     to {
       padding-block: 10px;
+      box-shadow: 0 0 18px 0 var(--color-black);
     }
   }
 

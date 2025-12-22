@@ -1,0 +1,62 @@
+.design {
+  &__body {
+    display: grid;
+    grid-template-columns: calc(883 / 1200 * 100%) auto;
+    align-items: end;
+    gap: 20px fluid-to-mobile(95, 20);
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__image {
+    position: relative;
+  }
+
+  &__content {
+    display: grid;
+    gap: 30px 40px;
+    margin-bottom: fluid-to-mobile(95, 0);
+  }
+
+  &__author {
+    position: absolute;
+    top: 27px;
+    right: -201px;
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    padding: 17px 52px 18px 20px;
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-author);
+
+    @include tablet {
+      top: 0;
+      right: 0;
+      padding: 10px;
+    }
+
+    @include mobile-s {
+      position: static;
+      display: flex;
+      justify-content: center;
+    }
+
+    &-avatar {
+      @include tablet {
+        width: 40px;
+      }
+    }
+
+    &-info {
+      display: grid;
+    }
+
+    &-name {
+      font-weight: 600;
+      line-height: 1.4;
+      color: var(--color-black);
+    }
+  }
+}
