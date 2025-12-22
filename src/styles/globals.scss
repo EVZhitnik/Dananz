@@ -81,3 +81,9 @@ a {
 :focus-visible {
     @include focus-visible;
 }
+
+.header,
+main > *:not(:last-child),
+.footer {
+    display: none !important;
+}

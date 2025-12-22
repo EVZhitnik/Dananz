@@ -64,14 +64,6 @@
         color: var(--color-lightgray);
       }
     }
-
-    &-button {
-      color: var(--color-black);
-
-      @include hover {
-        color: var(--color-blue);
-      }
-    }
   }
 
   &__actions {

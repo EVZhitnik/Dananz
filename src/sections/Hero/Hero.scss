@@ -1,6 +1,6 @@
 .hero {
   padding-top: fluid-to-mobile(57, 50);
-  padding-bottom: var(--home-section-padding-y);
+  padding-bottom: fluid-to-mobile(80, 50);
 
   &__header {
     position: relative;

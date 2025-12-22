@@ -22,7 +22,14 @@ export default (props) => {
       >
         {subtitle}
       </span>
-      <h2 className="section__title h2" id={titleId}>{title}</h2>
+      <h2 
+        className={clsx("section__title h2", {
+        [`section__title--${mode}`]: mode,
+      })} 
+        id={titleId}
+      >
+        {title}
+      </h2>
     </>
   );
 
@@ -41,7 +48,9 @@ export default (props) => {
             </div>
           ) : headerContent}
           {description && (
-            <div className="section__description">
+            <div className={clsx("section__description", {
+              [`section__description--${mode}`]: mode,
+            })}>
               <p>{description}</p>
             </div>
           )}

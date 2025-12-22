@@ -1,4 +1,6 @@
 .section {
+  padding-block: var(--home-section-padding-y);
+  
   &__header {
     &--about {
       &:not(:last-child) {
@@ -33,6 +35,20 @@
 
     &:not(:last-child) {
       margin-bottom: 20px;
+    }
+  }
+
+  &__title {
+    &--service {
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+  
+  &__description {
+    &--service {
+      max-width: 471px;
     }
   }
 }
