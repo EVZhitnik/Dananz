@@ -1,0 +1,43 @@
+.connect {
+  background-color: var(--color-blue);
+  padding-block: 38px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px 20px;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+
+  &__title {
+    color: var(--color-white);
+    max-width: 613px;
+
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+
+  &__info {
+    display: grid;
+    row-gap: 20px;
+    max-width: 432px;
+
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+
+  &__description {
+    color: var(--color-lightgray);
+  }
+
+  &__link {
+    justify-self: start;
+  }
+}
