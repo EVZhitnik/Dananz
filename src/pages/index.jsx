@@ -1,4 +1,5 @@
 import About from "@/sections/About";
+import Connect from "@/sections/Connect";
 import Hero from "@/sections/Hero";
 import Material from "@/sections/Material";
 import Product from "@/sections/Product";
@@ -17,6 +18,7 @@ export default function () {
       <Service />
       <Product />
       <Material />
+      <Connect />
     </>
   )
 }
