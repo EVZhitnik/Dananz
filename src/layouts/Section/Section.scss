@@ -7,12 +7,22 @@
         margin-bottom: fluid(60, 50);
       }
     }
+
+    &--product {
+      &:not(:last-child) {
+        margin-bottom: fluid(73, 50);
+      }
+    }
   } 
 
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(2 ,1fr);
     gap: 20px;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__subtitle {
@@ -49,6 +59,15 @@
   &__description {
     &--service {
       max-width: 471px;
+    }
+    
+    &--product {
+      max-width: 473px;
+      margin-left: auto;
+
+      @include mobile {
+        margin: 0;
+      }
     }
   }
 }

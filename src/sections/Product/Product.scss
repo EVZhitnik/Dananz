@@ -1,0 +1,38 @@
+.product {
+  &__list {
+    display: grid;
+    row-gap: 43px;
+    list-style: none;
+    counter-reset: item;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+    counter-increment: item;
+    padding-left: fluid(120, 55);
+
+    &::before {
+      @include fluid-text(32, 26);
+
+      content: counter(item, decimal-leading-zero);
+      position: absolute;
+      left: 0;
+      font-weight: 600;
+      line-height: 1.4;
+      color: var(--color-black-50);
+    }
+  }
+
+  &__text {
+    display: grid;
+    row-gap: fluid(24, 16);
+  }
+
+  &__description {
+    color: var(--color-black-50);
+    max-width: 469px;
+  }
+}
