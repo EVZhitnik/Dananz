@@ -1,0 +1,32 @@
+.benefits {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 18px;
+
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile-s {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    row-gap: 20px;
+    padding: 20px 27px;
+    box-shadow: var(--shadow);
+  }
+
+  &__circle {
+    @include square(63px);
+
+    background-color: var(--color-lightgray);
+    border-radius: 50%;
+    margin-inline: auto;
+  }
+}

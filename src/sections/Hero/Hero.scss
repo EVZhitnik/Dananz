@@ -1,6 +1,10 @@
 .hero {
   padding-top: fluid-to-mobile(57, 50);
-  padding-bottom: fluid-to-mobile(80, 50);
+  padding-bottom: var(--section-padding-y);
+
+  &:has(.hero__body.hero__body--home) {
+    padding-bottom: var(--home-section-padding-y);
+  }
 
   &__header {
     display: grid;
