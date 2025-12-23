@@ -1,3 +1,4 @@
+import Achievement from "@/sections/Achievement";
 import Hero from "@/sections/Hero";
 
 export const metadata = {
@@ -9,6 +10,7 @@ export default function () {
   return (
     <>
       <Hero label="about" />
+      <Achievement />
     </>
   );
 };

@@ -51,6 +51,7 @@
     font-weight: 700;
     line-height: 1.4;
     color: var(--color-black-50);
+    text-align: left;
   }
 
   &__descriprion {
@@ -82,8 +83,9 @@
         grid-template-columns: fluid-to-mobile(252, 200) auto;
       }
 
-      @include mobile-s {
-        grid-template-columns: 1fr;
+      @include mobile {
+        display: flex;
+        flex-direction: column-reverse;
       }
     }
   }

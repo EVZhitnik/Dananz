@@ -37,6 +37,12 @@
         margin-bottom: fluid(73, 50);
       }
     }
+
+    &--achievement {
+      &:not(:last-child) {
+        margin-bottom: fluid(56, 50);
+      }
+    }
   } 
 
   &__wrapper {

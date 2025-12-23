@@ -1,0 +1,29 @@
+.achievement {
+  &__content {
+    display: grid;
+    grid-template-columns: auto calc(252/ 1200 * 100%);
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__image {
+    height: 100%;
+    object-fit: cover;
+
+    @include tablet {
+      width: 100%;
+    }
+  }
+
+  &__results {
+    .results__list {
+      @include tablet {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 10px;
+      }
+    }
+  }
+}
