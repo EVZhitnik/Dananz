@@ -8,7 +8,7 @@ import Service from "@/sections/Service";
 export const metadata = {
 	title: 'Home',
 	isHeaderFixed: true,
-}
+};
 
 export default function () {
   return (
@@ -20,5 +20,5 @@ export default function () {
       <Material />
       <Connect />
     </>
-  )
-}
+  );
+};
