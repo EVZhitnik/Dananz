@@ -1,6 +1,6 @@
 import Section from '@/layouts/Section';
 import './Product.scss';
-import Button from '@/components/Button';
+import Accordion from '@/components/Accordion';
 
 export default () => {
   const productData = [
@@ -33,24 +33,13 @@ export default () => {
       titleId="product-title"
       description="Find the theme you want. If our choice of theme is not what you want, you can customize it as you want."
     >
-      <ol className="product__list">
-        {productData.map(({ title, description }, index) => (
-          <li className="product__item" key={index}>
-            <div className="product__text">
-              <h3 className="product__title">{title}</h3>
-              <div className="product__description">
-                <p>{description}</p>
-              </div>
-            </div>
-            <Button 
-              className="product__link"
-              hred="./"
-              isLabelHidden
-              iconName="arrow-right"
-            />
-          </li>
-        ))}
-      </ol>
+      <div className="product__accordion">
+        <Accordion
+          mode="product" 
+          tag="h3"
+          accordionData={productData} 
+        />
+      </div>
     </Section>
   );
 };

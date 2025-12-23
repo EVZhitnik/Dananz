@@ -1,7 +1,9 @@
 .service {
-  &__content {
+  &__accordion {
     position: relative;
     z-index: 10;
+    display: grid;
+    row-gap: 35px;
     width: calc(883 / 1200 * 100%);
     padding-block: 40px;
     padding-right: 40px;
@@ -10,34 +12,6 @@
     @include mobile {
       width: 100%;
       padding-right: 0;
-    }
-  }
-
-  &__list {
-    display: grid;
-    row-gap: 35px;
-    list-style: none;
-    counter-reset: item;
-  }
-
-  &__item {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    column-gap: 20px;
-    counter-increment: item;
-    padding-left: 55px;
-
-    &::before {
-      @include fluid-text(24, 20);
-
-      content: counter(item, decimal-leading-zero);
-      position: absolute;
-      left: 0;
-      font-weight: 600;
-      line-height: 1.4;
-      color: var(--color-black-50);
     }
   }
 
