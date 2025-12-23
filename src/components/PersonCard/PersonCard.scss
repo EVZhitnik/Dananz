@@ -1,0 +1,84 @@
+.person-card {
+  height: fluid-to-mobile(400, 350);
+
+  &:nth-child(1) {
+    background:
+      var(--color-blue)
+      url("../../assets/images/person/1.png") bottom/contain no-repeat
+    ;
+  }
+  &:nth-child(2) {
+    background:
+      var(--color-blue)
+      url("../../assets/images/person/2.png") bottom/contain no-repeat
+    ;
+  }
+  &:nth-child(3) {
+    background:
+      var(--color-blue)
+      url("../../assets/images/person/3.png") bottom/contain no-repeat
+    ;
+  }
+  &:nth-child(4) {
+    background:
+      var(--color-blue)
+      url("../../assets/images/person/4.png") bottom/contain no-repeat
+    ;
+  }
+  &:nth-child(5) {
+    background:
+      var(--color-blue)
+      url("../../assets/images/person/5.png") bottom/contain no-repeat
+    ;
+  }
+  &:nth-child(6) {
+    background:
+      var(--color-blue)
+      url("../../assets/images/person/6.png") bottom/contain no-repeat
+    ;
+  }
+  &:nth-child(7) {
+    background:
+      var(--color-blue)
+      url("../../assets/images/person/7.png") bottom/contain no-repeat
+    ;
+  }
+  &:nth-child(8) {
+    background:
+      var(--color-blue)
+      url("../../assets/images/person/8.png") bottom/contain no-repeat
+    ;
+  }
+
+  &__link {
+    @include square(100%);
+
+    display: flex;
+    align-items: end;
+    padding: 12px;
+
+    @include hover {
+      .person-card__name {
+        color: var(--color-blue-90);
+      }
+    }
+  }
+
+  &__info {
+    width: 100%;
+    padding: 18px 16px;
+    background-color: var(--color-white);
+
+    svg {
+      display: none;
+    }
+  }
+
+  &__name {
+    transition-duration: var(--transition-duration);
+  }
+
+  &__department {
+    font-size: 16px;
+  }
+}

@@ -27,7 +27,7 @@ export default (props) => {
     ],
     teams: [
       {
-        title: "Teams",
+        title: "Our Teams",
         description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
         imgSrc: "./src/assets/images/hero/4.jpg",
         alt: "Team hands on the table"

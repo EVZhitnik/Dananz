@@ -29,31 +29,32 @@
   &__header {
     &--about {
       &:not(:last-child) {
-        margin-bottom: fluid(60, 50);
+        margin-bottom: fluid-to-mobile(60, 50);
       }
     }
 
     &--product {
       &:not(:last-child) {
-        margin-bottom: fluid(73, 50);
+        margin-bottom: fluid-to-mobile(73, 50);
       }
     }
 
     &--achievement {
       &:not(:last-child) {
-        margin-bottom: fluid(56, 50);
+        margin-bottom: fluid-to-mobile(56, 50);
       }
     }
 
-    &--benefits {
+    &--benefits,
+    &--success  {
       &:not(:last-child) {
         margin-bottom: 40px;
       }
     }
 
-    &--success {
+    &--designer {
       &:not(:last-child) {
-        margin-bottom: 40px;
+        margin-bottom: fluid-to-mobile(80, 50);
       }
     }
   } 
@@ -92,7 +93,9 @@
   }
 
   &__title {
-    &--service {
+    &--service,
+    &--benefits,
+    &--designer {
       &:not(:last-child) {
         margin-bottom: 24px;
       }
@@ -103,16 +106,12 @@
         margin-bottom: 10px;
       }
     }
-
-    &--benefits {
-      &:not(:last-child) {
-        margin-bottom: 25px;
-      }
-    }
   }
   
   &__description {
-    &--service {
+    &--service,
+    &--benefits,
+    &--designer  {
       max-width: 471px;
     }
     
@@ -131,10 +130,6 @@
       &:not(:last-child) {
         margin-bottom: 23px;
       }
-    }
-
-    &--benefits {
-      max-width: 471px;
     }
   }
 }
