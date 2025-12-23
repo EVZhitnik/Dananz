@@ -17,7 +17,7 @@ export default (props) => {
         alt: "A team of people are considering a business project"
       },
     ],
-    servisec: [
+    services: [
       {
         title: "Servisec",
         description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",

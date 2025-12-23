@@ -2,7 +2,11 @@ import Section from '@/layouts/Section';
 import './About.scss';
 import Design from '@/components/Design';
 
-export default () => {
+export default (props) => {
+  const {
+    label = "",
+  } = props;
+
   const designData = [
     {
       imgSrc: "./src/assets/images/design/1.jpg",
@@ -20,6 +24,7 @@ export default () => {
   return (
     <Section
       className="about"
+      label={label}
       mode="about"
       subtitle="about"
       subtitleWidth="54px"

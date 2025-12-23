@@ -14,10 +14,10 @@ export default function () {
   return (
     <>
       <Hero label="home" />
-      <About />
-      <Service />
-      <Product />
-      <Material />
+      <About label="padding" />
+      <Service label="padding" />
+      <Product label="padding" />
+      <Material label="padding" />
       <Connect />
     </>
   );

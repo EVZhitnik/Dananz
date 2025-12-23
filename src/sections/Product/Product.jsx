@@ -2,7 +2,11 @@ import Section from '@/layouts/Section';
 import './Product.scss';
 import Accordion from '@/components/Accordion';
 
-export default () => {
+export default (props) => {
+  const {
+    label = "",
+  } = props;
+
   const productData = [
     {
       title: "Vintage",
@@ -25,6 +29,7 @@ export default () => {
   return (
     <Section
       className="product"
+      label={label}
       mode="product"
       isTwoColumnsInfo
       subtitle="product"

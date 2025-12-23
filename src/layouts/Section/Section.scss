@@ -1,14 +1,15 @@
 .section {
-  padding-block: var(--section-padding-y);
+  padding-bottom: var(--section-padding-y);
   
+  &--padding {
+    padding-bottom: var(--home-section-padding-y)
+  }
+
   &--material {
     display: grid;
     grid-template-columns: auto calc(623 / 1200 * 100%);
     gap: 30px 20px;
-    height: 490px;
-    padding-block: 0;
-    margin-top: var(--home-section-padding-y);
-    margin-bottom: fluid(120, 50);
+    height: 650px;
 
     @include tablet {
       grid-template-columns: 1fr;
@@ -45,6 +46,12 @@
     }
 
     &--benefits {
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+
+    &--success {
       &:not(:last-child) {
         margin-bottom: 40px;
       }
