@@ -1,12 +1,25 @@
 .design {
-  &__body {
+  &__item {
     display: grid;
-    grid-template-columns: calc(883 / 1200 * 100%) auto;
     align-items: end;
     gap: 20px fluid-to-mobile(95, 20);
 
-    @include mobile {
-      grid-template-columns: 1fr;
+    &--before {
+      grid-template-columns: auto calc(883 / 1200 * 100%);
+
+      @include mobile {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+
+    &--after {
+      grid-template-columns: calc(883 / 1200 * 100%) auto;
+
+      @include mobile {
+        display: flex;
+        flex-direction: column;
+      }
     }
   }
 
@@ -15,15 +28,23 @@
   }
 
   &__content {
-    display: grid;
-    gap: 30px 40px;
     margin-bottom: fluid-to-mobile(95, 0);
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__description {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
   }
 
   &__author {
     position: absolute;
-    top: 27px;
-    right: -201px;
     display: flex;
     align-items: center;
     column-gap: 16px;
@@ -32,8 +53,6 @@
     box-shadow: var(--shadow-author);
 
     @include tablet {
-      top: 0;
-      right: 0;
       padding: 10px;
     }
 
@@ -41,6 +60,26 @@
       position: static;
       display: flex;
       justify-content: center;
+    }
+
+    &--before {
+      top: 26px;
+      left: -196px;
+
+      @include tablet {
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &--after {
+      top: 27px;
+      right: -201px;
+
+      @include tablet {
+        top: 0;
+        right: 0;
+      }
     }
 
     &-avatar {
