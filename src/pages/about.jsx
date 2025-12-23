@@ -1,5 +1,6 @@
 import Achievement from "@/sections/Achievement";
 import Benefits from "@/sections/Benefits";
+import Connect from "@/sections/Connect";
 import Hero from "@/sections/Hero";
 
 export const metadata = {
@@ -13,6 +14,7 @@ export default function () {
       <Hero label="about" />
       <Achievement />
       <Benefits />
+      <Connect />
     </>
   );
 };
