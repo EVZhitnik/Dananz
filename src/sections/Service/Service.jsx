@@ -4,7 +4,10 @@ import Button from '@/components/Button';
 import { Image } from 'minista';
 import Accordion from '@/components/Accordion';
 
-export default () => {
+export default (props) => {
+  const {
+    label = "",
+  } = props;
 
   const serviceData = [
     {
@@ -24,6 +27,7 @@ export default () => {
   return (
     <Section
       className="service"
+      label={label}
       mode="service"
       subtitle="service"
       subtitleWidth="65px"

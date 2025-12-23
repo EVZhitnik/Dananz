@@ -2,10 +2,15 @@ import Section from '@/layouts/Section';
 import './Material.scss';
 import { Image } from 'minista';
 
-export default () => {
+export default (props) => {
+  const {
+    label = "",
+  } = props;
+
   return (
     <Section
       className="material"
+      label={label}
       isTwoColumnsSection
       mode="material"
       subtitle="material"

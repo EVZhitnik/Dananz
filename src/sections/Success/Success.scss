@@ -1,0 +1,30 @@
+.success {
+  &__list {
+    display: grid;
+    row-gap: 40px;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 20px;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__info {
+    display: grid;
+    row-gap: 20px;
+  }
+
+  &__description {
+    max-width: 334px;
+
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+}

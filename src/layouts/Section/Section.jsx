@@ -5,6 +5,7 @@ import clsx from 'clsx';
 export default (props) => {
   const {
     className,
+    label,
     isTwoColumnsSection = false,
     mode = '',
     isTwoColumnsInfo = false,
@@ -19,14 +20,16 @@ export default (props) => {
 
   const headerContent = (
     <>
-      <h2 
-        className={clsx("section__title h2", {
-        [`section__title--${mode}`]: mode,
-      })} 
-        id={titleId}
-      >
-        {title}
-      </h2>
+      {title && (
+        <h2 
+          className={clsx("section__title h2", {
+          [`section__title--${mode}`]: mode,
+        })} 
+          id={titleId}
+        >
+          {title}
+        </h2>
+      )}
       {description && (
         <div className={clsx("section__description", {
           [`section__description--${mode}`]: mode,
@@ -42,6 +45,7 @@ export default (props) => {
       className={clsx(className, 'section', {
         [`section--${mode}`]: isTwoColumnsSection,
       },
+      {[`section--${label}`]: label},
       'container'
     )}
       aria-label={titleId}  
