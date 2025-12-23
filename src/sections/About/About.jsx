@@ -9,8 +9,11 @@ export default (props) => {
 
   const designData = [
     {
+      position: "after",
       imgSrc: "./src/assets/images/design/1.jpg",
+      alt: "Minimalist kitchen with a wooden dining table, chairs, and white cabinetry against a concrete floor",
       description: "Online learning with us does not interfere with your daily life. because learning can be done anytime and anywhere.",
+      labelLink: "Learn More",
       author: [
         {
           authorImgSrc: "./src/assets/images/design/author/avatar-1.png",
@@ -31,10 +34,7 @@ export default (props) => {
       title="“We're one of the best furniture agency. Prioritizing customers and making purchases easy are the hallmarks of our agency.”"
       titleId="about-title"
     >
-      <Design 
-        className="about__design"
-        designData={designData}
-      />
+      <Design className="about__design" designData={designData} />
     </Section>
   );
 };

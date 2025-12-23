@@ -81,7 +81,7 @@ export default (props) => {
           <>
             <header className="hero__header">
               <h1 className="hero__title" id="hero-label">{title}</h1>
-              <div className="hero__descriprion">{description}</div>
+              <div className="hero__description">{description}</div>
             </header>
             <div className="hero__body" key={index}>
               <Image 
@@ -97,11 +97,11 @@ export default (props) => {
   };
 
   return (
-    <div>
+    <>
       {label === "home"
         ? getHeroBodyOfTheHomePage()
         : getDefaultPageBody(label)
       }
-    </div>
+    </>
   );
 };
