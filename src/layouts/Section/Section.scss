@@ -1,6 +1,6 @@
 .section {
-  padding-block: var(--home-section-padding-y);
-
+  padding-block: var(--section-padding-y);
+  
   &--material {
     display: grid;
     grid-template-columns: auto calc(623 / 1200 * 100%);
@@ -41,6 +41,12 @@
     &--achievement {
       &:not(:last-child) {
         margin-bottom: fluid(56, 50);
+      }
+    }
+
+    &--benefits {
+      &:not(:last-child) {
+        margin-bottom: 40px;
       }
     }
   } 
@@ -90,6 +96,12 @@
         margin-bottom: 10px;
       }
     }
+
+    &--benefits {
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+    }
   }
   
   &__description {
@@ -108,9 +120,14 @@
 
     &--material {
       max-width: 497px;
+
       &:not(:last-child) {
         margin-bottom: 23px;
       }
+    }
+
+    &--benefits {
+      max-width: 471px;
     }
   }
 }

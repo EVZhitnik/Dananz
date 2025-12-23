@@ -1,4 +1,6 @@
 .service {
+  padding-block: var(--home-section-padding-y);
+  
   &__accordion {
     position: relative;
     z-index: 10;
