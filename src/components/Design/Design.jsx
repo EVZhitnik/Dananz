@@ -9,7 +9,7 @@ export default (props) => {
     designData = [],
   } = props;
 
-  const getContentDesign = (title, description, labelLink) => {
+  const getContentDesign = (title, description, labelLink, href) => {
     return (
       <div className="design__content">
         {title && (
@@ -20,7 +20,7 @@ export default (props) => {
         </div>
         <Button 
           className="design__button"
-          href="./"
+          href={href}
           label={labelLink}
         />
       </div>
@@ -36,7 +36,8 @@ export default (props) => {
           alt,
           title, 
           description,
-          labelLink, 
+          labelLink,
+          href, 
           author,
         } = items;
 
@@ -47,7 +48,7 @@ export default (props) => {
             })} 
             key={index}
           >
-            {position === "before" && getContentDesign(title, description, labelLink)}
+            {position === "before" && getContentDesign(title, description, labelLink, href)}
 
             <div className="design__image">
               <Image src={imgSrc} alt={alt}/>
@@ -71,7 +72,7 @@ export default (props) => {
               ))}
             </div>
 
-            {position === "after" && getContentDesign(title, description, labelLink)}
+            {position === "after" && getContentDesign(title, description, labelLink, href)}
           </div>         
         )})}
     </div>

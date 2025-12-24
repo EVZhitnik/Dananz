@@ -14,6 +14,7 @@ export default (props) => {
       alt: "Minimalist kitchen with a wooden dining table, chairs, and white cabinetry against a concrete floor",
       description: "Online learning with us does not interfere with your daily life. because learning can be done anytime and anywhere.",
       labelLink: "Learn More",
+      href: "./details",
       author: [
         {
           authorImgSrc: "./src/assets/images/design/author/avatar-1.png",
