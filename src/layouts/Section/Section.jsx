@@ -18,27 +18,36 @@ export default (props) => {
     children,
   } = props;
 
-  const headerContent = (
-    <>
-      {title && (
-        <h2 
-          className={clsx("section__title h2", {
-          [`section__title--${mode}`]: mode,
-        })} 
-          id={titleId}
-        >
-          {title}
-        </h2>
-      )}
-      {description && (
-        <div className={clsx("section__description", {
-          [`section__description--${mode}`]: mode,
-        })}>
-          <p>{description}</p>
-        </div>
-      )}
-    </>
-  );
+  const getheaderContent = () => {
+    return (
+      <>
+        {title ? (
+          <h2 
+            className={clsx("section__title h2", {
+            [`section__title--${mode}`]: mode,
+          })} 
+            id={titleId}
+          >
+            {title}
+          </h2>
+        ) : (
+          <h2 
+            className={clsx("section__title visually-hidden")} 
+            id={titleId}
+          >
+            {className.charAt(0).toUpperCase() + className.slice(1)}
+          </h2>
+        )}
+        {description && (
+          <div className={clsx("section__description", {
+            [`section__description--${mode}`]: mode,
+          })}>
+            <p>{description}</p>
+          </div>
+        )}
+      </>
+    )
+  };
 
   return (
     <section 
@@ -54,17 +63,19 @@ export default (props) => {
         [`section__header--${mode}`]: mode,
       })}>
         <div className="section__info">
-          <span 
-            className="section__subtitle"
-            style={subtitleWidth ? { '--subtitle-width': subtitleWidth } : undefined}
-          >
-            {subtitle}
-          </span>
+          {subtitle && (
+            <span 
+              className="section__subtitle"
+              style={subtitleWidth ? { '--subtitle-width': subtitleWidth } : undefined}
+            >
+              {subtitle}
+            </span>
+          )}
           {isTwoColumnsInfo ? (
             <div className="section__wrapper">
-              {headerContent}
+              {getheaderContent()}
             </div>
-          ) : headerContent}
+          ) : getheaderContent()}
           {actions && (
             <Button 
               className="section__button"

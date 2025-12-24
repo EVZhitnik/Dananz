@@ -11,6 +11,7 @@ export default () => {
       title: "Minimalist Room",
       description: "Online learning with us does not interfere with your daily life. because learning can be done anytime and anywhere.",
       labelLink: "See More",
+      href: "./details",
       author: [
         {
           authorImgSrc: "./src/assets/images/design/author/avatar-1.png",
@@ -26,6 +27,7 @@ export default () => {
       title: "Vintage Room",
       description: "Online learning with us does not interfere with your daily life. because learning can be done anytime and anywhere.",
       labelLink: "See More",
+      href: "./details",
       author: [
         {
           authorImgSrc: "./src/assets/images/design/author/avatar-1.png",
@@ -41,6 +43,7 @@ export default () => {
       title: "Modern Room",
       description: "Online learning with us does not interfere with your daily life. because learning can be done anytime and anywhere.",
       labelLink: "See More",
+      href: "./details",
       author: [
         {
           authorImgSrc: "./src/assets/images/design/author/avatar-1.png",
@@ -56,6 +59,7 @@ export default () => {
       title: "Transitional Room",
       description: "Online learning with us does not interfere with your daily life. because learning can be done anytime and anywhere.",
       labelLink: "See More",
+      href: "./details",
       author: [
         {
           authorImgSrc: "./src/assets/images/design/author/avatar-1.png",
@@ -72,6 +76,7 @@ export default () => {
       mode="portfolio"
       subtitle="portfolio"
       subtitleWidth="86px"
+      titleId="portfolio-title"
     >
       <Design className="portfolio__design" designData={designData} />
     </Section>
