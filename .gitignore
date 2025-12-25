@@ -1,6 +1,11 @@
-.DS_Store
-Thumbs.db
-db.json
+node_modules/
+.env*
+.vscode/
+.idea/
+*.code-workspace
+dist/
+build/
 *.log
-node_modules
-dist
+.cache/
+*.tmp
+*.DS_Store
