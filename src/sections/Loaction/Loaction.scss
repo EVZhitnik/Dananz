@@ -1,0 +1,69 @@
+.loaction {
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px 20px;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__info {
+    display: grid;
+    gap: fluid-to-mobile(40, 20);
+
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile-s {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  }
+
+  &__heading {
+    display: grid;
+    row-gap: fluid-to-mobile(24, 10);
+  }
+
+  &__actions {
+    display: grid;
+    row-gap: fluid-to-mobile(33, 20);
+  }
+
+  &__row {
+    display: grid;
+    row-gap: 10px;
+  }
+
+  &__email,
+  &__phone {
+    display: inline-grid;
+    color: var(--color-gray);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: fluid-to-mobile(40, 30) fluid-to-mobile(60, 30);
+
+    @include mobile-s {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    display: grid;
+    row-gap: 30px;
+  }
+
+  &__description {
+    max-width: 334px;
+
+    @include mobile-s {
+      max-width: 100%;
+    }
+  }
+}

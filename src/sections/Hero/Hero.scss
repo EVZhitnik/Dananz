@@ -11,6 +11,7 @@
     row-gap: 36px;
     align-items: center;
     text-align: center;
+    padding-inline: 16px;
 
     &:not(:last-child) {
       margin-bottom: fluid(86, 40);
