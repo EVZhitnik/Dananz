@@ -1,0 +1,67 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: 10px;
+
+  &__label {
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--color-black-50);
+  }
+
+  &__required-star {
+    font-weight: 700;
+    color: var(--color-red)
+  }
+
+  &__body {
+    display: flex;
+    width: 100%;
+
+    &:has(.select) {
+      border: var(--border-form);
+      transition-duration: var(--transition-duration);
+
+      @include hover {
+        border-color: var(--color-blue);
+      }
+    }
+  }
+
+  &__control {
+    width: 100%;
+    height: fluid-to-mobile(62, 52);
+    padding: 18px fluid-to-mobile(32, 18);
+    font-weight: 500;
+    color: var(--color-black-50);
+    background-color: var(--color-white);
+    border: var(--border-form);
+
+    @include hover {
+      border-color: var(--color-blue);
+    }
+
+    &:user-invalid {
+      border-color: var(--color-red);
+    }
+
+    &:disabled {
+      @include disabled;
+    }
+
+    &::placeholder {
+      color: var(--color-gray);
+    }
+
+    &--phone {
+      border: 0;
+    }
+  }
+
+  textarea.field__control {
+    resize: vertical;
+    min-height: fluid(178, 108);
+    padding-block: fluid-to-mobile(20, 16);
+  }
+}

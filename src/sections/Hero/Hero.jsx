@@ -2,6 +2,7 @@ import Results from '@/components/Results';
 import './Hero.scss';
 import { Image } from 'minista';
 import clsx from 'clsx';
+import Form from '@/components/Form';
 
 export default (props) => {
   const {
@@ -49,6 +50,12 @@ export default (props) => {
         alt: "Minimalist room with a sofa and table"
       },
     ],
+    contact: [
+      {
+        title: "Contact Us",
+        description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      },     
+    ]
   };
 
   const getHeroBodyOfTheHomePage = () => {
@@ -74,7 +81,7 @@ export default (props) => {
     );
   };
 
-  const getDefaultPageBody = (label) => {
+  const getHeroBodyOfTheContactPage = (label) => {
     return (
       <section className={clsx("hero", "container")} aria-label="hero-label">
         {heroData[label].map((({ title, description, imgSrc, alt }, index) => (
@@ -90,6 +97,34 @@ export default (props) => {
                 alt={alt}
               />
             </div>
+          </>
+        )))}
+      </section>
+    );
+  };
+
+  const getDefaultPageBody = (label) => {
+    return (
+      <section className="hero" aria-label="hero-label">
+        {heroData[label].map((({ title, description, imgSrc, alt }, index) => (
+          <>
+            <header className="hero__header">
+              <h1 className="hero__title" id="hero-label">{title}</h1>
+              <div className="hero__description">{description}</div>
+            </header>
+            {label !== "contact" ? (
+              <div className="hero__body container" key={index}>
+                <Image 
+                  className="hero__image" 
+                  src={imgSrc}
+                  alt={alt}
+                />
+              </div>
+            ) : (
+              <div className="hero__body container-form" key={index}>
+                <Form className="hero__form" />
+              </div>              
+            )}
           </>
         )))}
       </section>

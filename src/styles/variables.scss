@@ -12,6 +12,7 @@
     --color-blue-50: #ABAFC9;
     --color-blue-25: #D5D7E4;
     --color-blue-10: #EAEBF2;
+    --color-red: #FF0000;
 
     --border-header: var(--border-width-m) solid var(--color-black);
     --border-footer: var(--border-width-s) solid var(--color-black-70);
@@ -32,6 +33,7 @@
     --font-family-base: 'Poppins';
 
     --container-width: #{fluid-to-mobile($container-desktop-width, $container-mobile-width)};
+    --container-alternate-width: #{fluid-to-mobile($container-form-width, $container-mobile-width)};
     --container-padding-x: 16px;
 
     --home-section-padding-y: #{fluid-to-mobile(120, 50)};
